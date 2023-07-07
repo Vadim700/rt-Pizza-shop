@@ -26,7 +26,6 @@ const EditPizzaForm: FC<EditPizzaFormProps> =
 
 	const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		
 		const { title, price, img } = editPizza;
 
 		if (title && price && img) {
@@ -34,37 +33,34 @@ const EditPizzaForm: FC<EditPizzaFormProps> =
 			handleToggleEdit();
 			}
 		}
-	
 
-	console.log('new pizza ->', editPizza)
-
-	return (
-		<form className='edit-form' onSubmit={handleSubmit}>
-			<input 
-				name='title'
-				type='text'
-				placeholder='Название'
-				onChange={handleChenge}
-				value={editPizza.title}
-			/>
-			<input 
-				name='price'
-				type='text'
-				placeholder='Стоимость'
-				onChange={handleChenge}
-				value={editPizza.price}
-			/>
-			<input 
-				name='img'
-				type='text'
-				placeholder='Изображение'
-				onChange={handleChenge}
-				value={editPizza.img}
-			/>
-			<button type='submit'>
-				Подтвердить
-			</button>
-		</form>
+		return (
+			<form className='edit-form' onSubmit={handleSubmit}>
+				<input 
+					name='title'
+					type='text'
+					placeholder='Название'
+					onChange={handleChenge}
+					value={editPizza.title}
+				/>
+				<input 
+					name='price'
+					type='text'
+					placeholder='Стоимость'
+					onChange={handleChenge}
+					value={editPizza.price}
+				/>
+				<input 
+					name='img'
+					type='text'
+					placeholder='Изображение'
+					onChange={handleChenge}
+					value={editPizza.img}
+				/>
+				<button type='submit'>
+					Подтвердить
+				</button>
+			</form>
 	)
 }
 
